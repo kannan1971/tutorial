@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% block head %}
+    <title>Home</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+
+    <h3> Welcome to Django Template system </h3>
+    </br>
+
+      <h4> {{ myName }} </h4> </br>
+      <ul> {% for number in myList %}
+          <li> {{ number }} </li>
+          {% endfor %}
+      </ul>
+     {% endblock %}
+  </body>
+</html>

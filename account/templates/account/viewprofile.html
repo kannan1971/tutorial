@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="container">
+<h2> UserProfile </h2>
+  <form>
+
+    <p> Username: {{ user }} </<p>
+    <p> FirstName:  {{ user.first_name }} </P>
+    <p> LastName: {{ user.last_name }} </p>
+    <p> Email: {{ user.email }} </p>
+    <p> Password: {{ user.password1 }} </p>
+    <p> Description: {{ user.userprofile.description }} </<p>
+    <p> City:  {{ user.userprofile.city }} </P>
+    <p> Website: {{ user.userprofile.website }} </p>
+    <p> Phone: {{ user.userprofile.Phone }} </p>
+    <img src= "{{ user.userprofile.image.url }}" width="240" >
+
+
+  </form>
+</div>
+
+{% endblock %}
